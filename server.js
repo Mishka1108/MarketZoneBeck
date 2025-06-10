@@ -21,7 +21,6 @@ app.use(express.json({ limit: '50mb' }));
 // Middleware to parse URL-encoded data (important for form submissions)
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/ping', pingRouter);
-// Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/users", require("./routes/user"));
